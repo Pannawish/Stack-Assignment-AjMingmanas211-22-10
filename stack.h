@@ -10,7 +10,8 @@ public:
     Stack(NodePtr = NULL);
     ~Stack();
     int pop();
-    void push(int);
+    void push(char);
+    int getSize(){return size;}
 };
 
 Stack::Stack(NodePtr t){
@@ -23,7 +24,7 @@ Stack::Stack(NodePtr t){
 	 size=0;
    }
 }
-void Stack::push(int x){
+void Stack::push(char x){
    NodePtr new_node=new NODE(x);
   //1
   if(new_node){
@@ -60,10 +61,10 @@ Stack::~Stack(){
 for(i=0;i<size;i++){
     top=top->get_next();
      delete t;
-    t=top;
+    //t=top;
    	// Left missing for exercises
   }
-while(size>0) pop();
+//while(size>0) pop();
 
 }
 
