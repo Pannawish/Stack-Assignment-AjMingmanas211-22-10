@@ -34,6 +34,7 @@ void Stack::push(char x){
        //4
     top=new_node;
       ++size;
+    cout<<"push"<<x<<endl;
    }
  else cout<<"No memory left for new nodes"<<endl;
 		 // Left missing for exercises…
@@ -50,15 +51,17 @@ int Stack::pop(){
      --size;
       return value;
      }
-    
+  else{
 		cout<<"Empty stack"<<endl;
    return 0;
+  }
 	}
 Stack::~Stack(){
    cout<<"Clearing all stacks"<<endl;
   	int i;
-  NodePtr t=top;
 for(i=0;i<size;i++){
+  NodePtr t=top;
+  if(top->get_next() != NULL)
     top=top->get_next();
      delete t;
     //t=top;

@@ -36,6 +36,7 @@ int main(int argc, char *argv[]) {
       default: break;
     }//end switch
     if (match==0) break;
+    if (close==1) break;
   }//end i loop
   if(s.getSize()>0){
     match=0;
